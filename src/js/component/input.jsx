@@ -30,7 +30,7 @@ const Input = () => {
                 <ul>
                     {toDo.map((item, index) => {
                         return (
-                            <div key={index}>
+                            <div key={index}className="d-flex">
                                 <li key={index}>{item}</li>
                                 <button></button>
                             </div>
