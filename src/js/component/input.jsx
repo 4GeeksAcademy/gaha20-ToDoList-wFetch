@@ -32,7 +32,18 @@ const Input = () => {
                         return (
                             <div key={index}className="d-flex">
                                 <li key={index}>{item}</li>
-                                <button></button>
+                                <button
+                                    onClick={(event) => {
+                                        const newToDo = toDo.filter((filterItem, filterIndex) => {
+                                            // return filterIndex != index (it the same)
+                                            if (filterIndex == index){
+                                                return false;
+                                            } 
+                                            return true;  
+                                        })   
+                                        setToDo(newToDo)
+                                    }}
+                                >X</button>
                             </div>
                         )
                     }
