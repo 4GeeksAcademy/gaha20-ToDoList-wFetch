@@ -22,6 +22,7 @@ const Input = () => {
             onKeyDown={(event) => {
                 console.log(event.key)
                 if (event.key == "Enter"){
+                    setData("")
                     setToDo((prev) => {
                         return [...prev , data];
                     })
