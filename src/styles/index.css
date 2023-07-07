@@ -2,7 +2,21 @@
     font-family: 'Comfortaa', cursive;
 }
 .task {
-    width: 50%;
+    width: 400px;
+    color:white;
+}
+.trash{
+    color:rgba(70, 72, 73, 0.469);
+    margin-top:5px;
+}
+.trash:hover{
+    color:white;
+}
+#toDo::placeholder{
+    color:aliceblue;
+}
+#toDo{
+    width: 400px;
 }
 /* 
 

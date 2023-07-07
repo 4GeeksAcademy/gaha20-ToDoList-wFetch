@@ -7,11 +7,12 @@ const Input = () => {
     return (
         <div className="container justify-content-center align-items-center vh-100 vw-50">
             <h1 className="text-light confortaa">2Do´s</h1>
-            <label htmlFor="toDo" className="text-light confortaa p-1"> task: </label>
+            <label htmlFor="toDo" className="text-light confortaa p-1"></label>
             <input
             className="bg-secondary text-light confortaa"
             type="text"
             id="toDo"
+            placeholder="what needs to be done?"
             value={data}
             onChange={(event) => {
                 console.log(data)
@@ -22,18 +23,18 @@ const Input = () => {
                 console.log(event.key)
                 if (event.key == "Enter"){
                     setToDo((prev) => {
-                        return [...prev , data] 
+                        return [...prev , data];
                     })
                 }
             }}
             />
-            <div className="text-light container task">
+            <div className="container text-light container task">
                 <ul>
                     {toDo.map((item, index) => {
                         return (
                             <div key={index}className="d-flex justify-content-between">
                                 <li  className="confortaa" key={index}>{item}</li>
-                                <i class="fa-regular fa-trash-can"
+                                <i className="fa-regular fa-trash-can trash"
                                     onClick={(event) => {
                                         const newToDo = toDo.filter((filterItem, filterIndex) => {
                                             // return filterIndex != index (it the same)
@@ -51,7 +52,11 @@ const Input = () => {
                     )}
                 </ul>
             </div>
-            <p className="text-light confortaa">{toDoCounter} item left</p>
+            <p className="text-light confortaa">
+                {
+                (toDoCounter == 0 ? "No tasks, add a task" : toDoCounter == 1 ? toDoCounter + " item left" : toDoCounter + " items left")
+                }
+                </p>
         </div>
     );
 };
