@@ -18,6 +18,18 @@
 #toDo{
     width: 400px;
 }
+.clear {
+    max-width: 120px;
+    border:dotted;
+    border-color: rgba(245, 245, 245, 0.382);
+    color:rgba(245, 245, 245, 0.382);
+}
+.clear:hover{
+    border-color: whitesmoke;
+    color:whitesmoke;
+}
+
+
 /* 
 
     You can write your own styles here...
