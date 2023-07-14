@@ -13,7 +13,7 @@
     color:white;
 }
 #toDo::placeholder{
-    color:aliceblue;
+    color:rgba(240, 248, 255, 0.21);
 }
 #toDo{
     width: 400px;
