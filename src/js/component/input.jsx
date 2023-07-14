@@ -135,7 +135,7 @@ const Input = () => {
             }
             onKeyDown={(event) => {
                 console.log(event.key)
-                if (event.key == "Enter"){
+                if (event.key == "Enter" && data.trim() != ''){
                     putToDo(data)
                     setData("")
                     /*setToDo((prev) => {
