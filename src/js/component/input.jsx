@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-const API_URL = "https://assets.breatheco.de/apis/fake/todos/user/gaha20";
+const API_URL = "https://playground.4geeks.com/apis/fake/todos/user/gaha20";
 
 const Input = () => {
     const [data, setData] = useState("")
