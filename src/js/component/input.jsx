@@ -83,8 +83,8 @@ const Input = () => {
                     body:JSON.stringify([]) 
                 });
                 console.log(response);
-                if (response.status != 200){
-                    console.log("hay un error en el DELETE")
+                if (response.status != 201){
+                    console.log("hay un error en el POST")
                     return;
                 }
                 getToDo()
@@ -102,7 +102,7 @@ const Input = () => {
                     },
                 });
                 console.log(response)
-                if (response.status != 200){
+                if (response.status != 201){
                     console.log("hay un error en el DELETE")
                     return;
                 }
